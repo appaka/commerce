@@ -14,6 +14,6 @@ Modules:
 - GraphQL: serving public data
 - Web: website
 
-Every microservice is developed in many languages (Java, Kotlin, Go, PHP, JS...), so you can make your own suite depending on your technical team skills. Even you can substitute any module with your own one, just following the API specification (RAML).
+Every microservice is developed in many languages (Java, Kotlin, Go, PHP, JS...), so you can make your own suite depending on your technical team skills. Even you can substitute any module with your own one, just following the API specification ([OpenAPI](http://spec.openapis.org/oas/v3.0.3)).
 
 The final solution could be assembled by Docker or Kubernetes.
