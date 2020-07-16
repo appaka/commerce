@@ -1,0 +1,36 @@
+version: "3.5"
+
+services:
+
+  catalog:
+    build:
+      context: ./catalog.java
+      #context: ./catalog.kotlin
+      #context: ./catalog.go
+      #context: ./catalog.php
+      dockerfile: Dockerfile
+    volumes:
+    - ./api/catalog-1.0.yml:/usr/share/api/catalog.yml
+
+  warehouse:
+    build:
+      context: ./warehouse.java
+      #context: ./warehouse.kotlin
+      #context: ./warehouse.go
+      #context: ./warehouse.php
+      dockerfile: Dockerfile
+    volumes:
+      - ./api/warehouse-1.0.yml:/usr/share/api/warehouse.yml
+
+  pricing:
+    build:
+      context: ./pricing.java
+      #context: ./pricing.kotlin
+      #context: ./pricing.go
+      #context: ./pricing.php
+      dockerfile: Dockerfile
+    volumes:
+      - ./api/pricing-1.0.yml:/usr/share/api/pricing.yml
+
+
+

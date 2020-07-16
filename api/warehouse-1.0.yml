@@ -1,0 +1,50 @@
+# example file
+title: Appaka Warehouse API
+version: 1.0
+description: Appaka Warehouse API definition
+termsOfService: https://commerce.appaka.ch/terms/
+contact:
+  name: Javier Pérez
+  url: https://github.com/appaka/commerce/issues
+  email: javier@appaka.ch
+license:
+  name: Apache 2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0.html
+schemas:
+  Stock:
+    type: object
+    properties:
+      sku:
+        type: string
+      warehouse:
+        type: string
+      stock:
+        type: integer
+  GeneralError:
+    type: object
+    properties:
+      error:
+        type: boolean
+      message:
+        type: string
+      code:
+        type: integer
+parameters:
+  api:
+    name: api
+    in: query
+    description: API version
+    required: true
+    schema:
+      type: string
+responses:
+  NotFound:
+    description: Entity not found.
+  IllegalInput:
+    description: Illegal input for operation.
+  GeneralError:
+    description: General Error
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/GeneralError'

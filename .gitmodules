@@ -1,0 +1,9 @@
+[submodule "catalog.java"]
+	path = catalog.java
+	url = git@github.com:appaka/catalog.java.git
+[submodule "pricing.java"]
+	path = pricing.java
+	url = git@github.com:appaka/pricing.java.git
+[submodule "warehouse.java"]
+	path = warehouse.java
+	url = git@github.com:appaka/warehouse.java.git
